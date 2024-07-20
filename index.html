@@ -1,148 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Office</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1
+      class="small-device-message"
+      style="
+        display: none;
+        text-align: center;
+        padding: 20px;
+        font-size: 18px;
+        color: #333;
+        background-color: #f8f8f8;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 9999;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      Please open this website on a larger device to view the content.
+    </h1>
     <div class="container">
-        <div class="box"></div>
-        <div class="box1"></div>
-        <div class="triangle-left"></div>
-        <div class="triangle-right"></div>
-        <div class="inner-screen">
-            <div class="text">
-                <h1>Welcome To WEB <br> DEVELOPMENT</h1>
-            </div>
+      <div class="box"></div>
+      <div class="box1"></div>
+      <div class="triangle-left"></div>
+      <div class="triangle-right"></div>
+      <div class="inner-screen">
+        <video id="myVideo" style="display: none">
+          <source src="public/video.mp4" type="video/mp4" />
+        </video>
+        <img id="myImage" src="public/image.jfif" style="display: none" />
+      </div>
+      <div class="outer-screen"></div>
+      <div class="trapezoid"></div>
+      <div class="base"></div>
+      <div class="speaker">
+        <div class="circle">
+          <div class="inner-circle"></div>
         </div>
-        <div class="outer-screen"></div>
-        <div class="trapezoid"></div>
-        <div class="base"></div>
-        <div class="speaker">
-            <div class="circle">
-                <div class="inner-circle"></div>
-            </div>
-            <div class="circle2"></div>
-            <div class="circle3"></div>
-            <div class="circle4"></div>
-        </div>
-        <div class="speaker-base"></div>
-        <div class="wrapper">
-            <ul id="clock">
-                <li class="numbers"><span>1</span></li>
-                <li class="numbers"><span>2</span></li>
-                <li class="numbers"><span>3</span></li>
-                <li class="numbers"><span>4</span></li>
-                <li class="numbers"><span>5</span></li>
-                <li class="numbers"><span>6</span></li>
-                <li class="numbers"><span>7</span></li>
-                <li class="numbers"><span>8</span></li>
-                <li class="numbers"><span>9</span></li>
-                <li class="numbers"><span>10</span></li>
-                <li class="numbers"><span>11</span></li>
-                <li class="numbers"><span>12</span></li>
-                <li id="hour"></li>
-                <li id="minute"></li>
-                <li id="second"></li>
-            </ul>
-        </div>
-        </div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+      </div>
+      <div class="speaker-base"></div>
+      <div class="wrapper">
+        <ul id="clock">
+          <li class="numbers"><span>1</span></li>
+          <li class="numbers"><span>2</span></li>
+          <li class="numbers"><span>3</span></li>
+          <li class="numbers"><span>4</span></li>
+          <li class="numbers"><span>5</span></li>
+          <li class="numbers"><span>6</span></li>
+          <li class="numbers"><span>7</span></li>
+          <li class="numbers"><span>8</span></li>
+          <li class="numbers"><span>9</span></li>
+          <li class="numbers"><span>10</span></li>
+          <li class="numbers"><span>11</span></li>
+          <li class="numbers"><span>12</span></li>
+          <li id="hour"></li>
+          <li id="minute"></li>
+          <li id="second"></li>
+        </ul>
+      </div>
 
-        <div id="wrap">
-            <div class="steam-1" id="steam"></div>
-            <div class="steam-2" id="steam"></div>
-            <div class="steam-3" id="steam"></div>
-            <div class="steam-4" id="steam"></div>
-    
-            <div id="cup">
-                <div class="cup-body">
-                    <div class="cup-shade"></div>
-                </div>
-                <div class="cup-handle"></div>
-                <div class="saurcer"></div>
-                <div class="shadow"></div>
-            </div>
-        </div>
+      <div id="wrap">
+        <div class="steam-1" id="steam"></div>
+        <div class="steam-2" id="steam"></div>
+        <div class="steam-3" id="steam"></div>
+        <div class="steam-4" id="steam"></div>
 
-        <div class="dbox1">
-            <div class="innerbox1"></div>
+        <div id="cup">
+          <div class="cup-body">
+            <div class="cup-shade"></div>
+          </div>
+          <div class="cup-handle"></div>
+          <div class="saurcer"></div>
+          <div class="shadow"></div>
         </div>
-        <div class="dbox2"></div>
-        <div class="dbox3">
-            <div class="innerbox2"></div>
-        </div>
-        <div class="dbox4"></div>
-        <div class="dbox5">
-            <div class="innerbox3"></div>
-        </div>
-        <div class="dbox6"></div>
-        <div class="dbox7">
-            <div class="innerbox4"></div>
-        </div>
-        <div class="dbox8"></div>
-        <div class="wheel1"></div>
-        <div class="wheel2"></div>
-        <div class="dbox9"></div>
+      </div>
 
-        <div class="bookshelf">
-            <div class="inner-sq1">
-                <div class="book1"></div>
-                <div class="book2"></div>
-                <div class="book3"></div>
-                <div class="book4"></div>
-            </div>
-            <div class="inner-sq2">
-                <div class="book5"></div>
-                <div class="book6"></div>
-                <div class="book7"></div>
-                <div class="book8"></div>
-                <div class="book9"></div>
-            </div>
-            <div class="inner-sq3">
-                <div class="book10"></div>
-                <div class="book11"></div>
-            </div>
-            <div class="inner-sq4">
-                <div class="book12"></div>
-                <div class="book13"></div>
-            </div>
-            <div class="inner-sq5">
-                <div class="lamp-stand"></div>
-                <div class="lamp-stick"></div>
-                <div class="lamp-stick1"></div>
-                <div class="bulbs-outer"></div>
-                <div class="bulbs"></div>
-            </div>
-        </div>
+      <!-- <div class="dbox1">
+        <div class="innerbox1"></div>
+      </div>
+      <div class="dbox2"></div>
+      <div class="dbox3">
+        <div class="innerbox2"></div>
+      </div>
+      <div class="dbox4"></div>
+      <div class="dbox5">
+        <div class="innerbox3"></div>
+      </div>
+      <div class="dbox6"></div>
+      <div class="dbox7">
+        <div class="innerbox4"></div>
+      </div>
+      <div class="dbox8"></div>
+      <div class="wheel1"></div>
+      <div class="wheel2"></div>
+      <div class="dbox9"></div>
 
-        <!-- Bulb -->
-
-        <div class="boxes">
-            <input type="checkbox" id="switch">
-            <div class="bulb">
-                <div class="bulb-bottom">
-                    <div class="bottom-bar"></div>
-                    <div class="bottom-bar"></div>
-                    <div class="bottom-bar"></div>
-                    <div class="bottom-bar"></div>
-                    <div class="bottom-bar"></div>
-                </div>
-            </div>
-            <label for="switch" class="switch">
-                <div class="outer">
-                    <div class="inner">
-                        <span class="on">ON</span>
-                        <span class="off">OFF</span>
-                    </div>
-                </div>
-            </label>
+      <div class="bookshelf">
+        <div class="inner-sq1">
+          <div class="book1"></div>
+          <div class="book2"></div>
+          <div class="book3"></div>
+          <div class="book4"></div>
         </div>
+        <div class="inner-sq2">
+          <div class="book5"></div>
+          <div class="book6"></div>
+          <div class="book7"></div>
+          <div class="book8"></div>
+          <div class="book9"></div>
+        </div>
+        <div class="inner-sq3">
+          <div class="book10"></div>
+          <div class="book11"></div>
+        </div>
+        <div class="inner-sq4">
+          <div class="book12"></div>
+          <div class="book13"></div>
+        </div>
+        <div class="inner-sq5">
+          <div class="lamp-stand"></div>
+          <div class="lamp-stick"></div>
+          <div class="lamp-stick1"></div>
+          <div class="bulbs-outer"></div>
+          <div class="bulbs"></div>
+        </div>
+      </div> -->
+
+      <!-- Bulb -->
+
+      <div class="boxes">
+        <input type="checkbox" id="switch" />
+        <div class="bulb">
+          <div class="bulb-bottom">
+            <div class="bottom-bar"></div>
+            <div class="bottom-bar"></div>
+            <div class="bottom-bar"></div>
+            <div class="bottom-bar"></div>
+            <div class="bottom-bar"></div>
+          </div>
+        </div>
+        <label for="switch" class="switch">
+          <div class="outer">
+            <div class="inner">
+              <span class="on">ON</span>
+              <span class="off">OFF</span>
+            </div>
+          </div>
+        </label>
+      </div>
+      <div class="wire"></div>
     </div>
-    <div class="wire"></div>
-    
-    </div>
-</body>
+
+    <script src="script.js"></script>
+  </body>
 </html>
